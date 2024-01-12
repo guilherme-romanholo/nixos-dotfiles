@@ -12,10 +12,10 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "desktop-nixos"; # Define your hostname.
+  networking.hostName = "taz-nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -46,9 +46,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the Deepin Desktop Environment.
+  # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.xserver.desktopManager.budgie.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -132,4 +132,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 }
