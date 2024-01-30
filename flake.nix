@@ -20,6 +20,11 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./system/acme/configuration.nix];
       };
+
+      desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./system/desktop/configuration.nix];
+      };
     };
 
     homeConfigurations = {
@@ -27,6 +32,12 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; 
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [./home/acme/home.nix];
+      };
+
+      "guilherme@desktop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/desktop/home.nix];
       };
     };
 
