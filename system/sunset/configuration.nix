@@ -5,26 +5,19 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 
 {
+  networking.hostName = "sunset"; 
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../common
-      inputs.home-manager.nixosModules.home-manager
+      ../common/global
+      ../common/optional/cups.nix
+      ../common/optional/xserver.nix
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      guilherme = import ../../home/acme/home.nix;
-    };
-  };
-
-  networking.hostName = "taz-workstation"; # Define your hostname.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   system.stateVersion = "23.11"; # Did you read the comment?
 

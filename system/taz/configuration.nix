@@ -5,25 +5,20 @@
 { inputs, outputs, lib, config, pkgs, ... }:
 
 {
+  networking.hostName = "taz"; 
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../common
-      inputs.home-manager.nixosModules.home-manager
+      ../common/global
+      ../common/optional/openssh.nix
+      ../common/optional/xserver.nix
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      guilherme = import ../../home/desktop/home.nix;
-    };
-  };
-
-  networking.hostName = "desktop"; # Define your hostname.
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
 
   system.stateVersion = "23.11"; # Did you read the comment?
 

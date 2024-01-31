@@ -10,34 +10,20 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs: 
+  outputs = { self, nixpkgs, ... } @ inputs: 
   let
     inherit (self) outputs;
   in {
 
     nixosConfigurations = {
-      taz-workstation = nixpkgs.lib.nixosSystem {
+      taz = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./system/acme/configuration.nix];
+        modules = [./system/taz/configuration.nix];
       };
 
-      desktop = nixpkgs.lib.nixosSystem {
+      sunset = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./system/desktop/configuration.nix];
-      };
-    };
-
-    homeConfigurations = {
-      "guilherme@taz-workstation" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/acme/home.nix];
-      };
-
-      "guilherme@desktop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/desktop/home.nix];
+        modules = [./system/sunset/configuration.nix];
       };
     };
 
