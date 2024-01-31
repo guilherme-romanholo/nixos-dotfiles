@@ -4,9 +4,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable GDM Display Manager
+  services.xserver.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
+
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {

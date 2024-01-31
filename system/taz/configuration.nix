@@ -12,13 +12,13 @@
       ./hardware-configuration.nix
       ../common/global
       ../common/optional/openssh.nix
-      ../common/optional/xserver.nix
+      ../common/optional/hyprland.nix
+      # ../common/optional/xserver.nix
     ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
 
   system.stateVersion = "23.11"; # Did you read the comment?
 

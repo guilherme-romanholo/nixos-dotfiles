@@ -8,7 +8,7 @@
   # You can import other home-manager modules here
   imports = [
     ./common/global
-    ./common/optional/hyprland.nix
+    ./common/optional/hyprconf.nix
   ];
 
   # Add stuff for your user as you see fit:
