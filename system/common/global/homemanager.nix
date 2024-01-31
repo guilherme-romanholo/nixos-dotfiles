@@ -10,7 +10,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      guilherme = import ../../../home/${config.networking.hostName}/home.nix;
+      guilherme = import ../../../home/${config.networking.hostName}.nix;
     };
   };
 
