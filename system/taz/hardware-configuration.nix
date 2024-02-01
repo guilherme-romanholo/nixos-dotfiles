@@ -13,10 +13,21 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c0b346f4-d937-4623-b08f-80081495da7a";
-      fsType = "ext4";
-    };
+  fileSystems."/" = { 
+    device = "/dev/disk/by-uuid/c0b346f4-d937-4623-b08f-80081495da7a";
+    fsType = "ext4";
+  };
+
+  fileSystems."/mnt/bkpsys" = {
+    device = "bkpsys.in.acmesecurity.org:/";
+    fsType = "nfs4";
+    options = [
+      "nofail"
+      "x-systemd.automount"
+      "x-systemd.requires=network-online.target"
+      "x-systemd.device-timeout=10"
+    ];
+  };
 
   swapDevices = [ ];
 
