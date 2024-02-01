@@ -11,12 +11,17 @@
 
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
+
+     exec-once = [
+       "${pkgs.waybar}/bin/waybar"
+       "${pkgs.swaybg}/bin/swaybg -i ${toString ../../wallpapers/gruv_city.png}"
+     ];
      
      bind = [
        "$mod, M, exit"
        "$mod, Q, killactive"
-       "$mod, Return, exec, kitty"
-       "$mod, F, exec, firefox"
+       "$mod, Return, exec, ${pkgs.kitty}/bin/kitty"
+       "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
      ] ++ (
          # workspaces
          # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}

@@ -7,6 +7,10 @@
     neovim
     kitty
     neofetch
+    duf
+    ripgrep
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    swaybg
   ];
 
 }
