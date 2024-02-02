@@ -30,7 +30,7 @@
       }
 
       #workspaces button {
-        color: #${config.colorScheme.palette.base06};
+        color: #${config.colorScheme.palette.base07};
         padding: 5px 11px 2px 9px;
       }
 
@@ -63,27 +63,25 @@
         margin-right: 0px;
         border-radius: 8px 0px 0px 8px;
 	      background-color: #${config.colorScheme.palette.base00};
-        padding: 8px 16px 6px 16px;
+        padding: 8px 10px 6px 16px;
         color: #${config.colorScheme.palette.base0B};
         font-size: 17px;
       }
 
       #memory {
         margin-top: 8px;
-        margin-right: 8px;
-        border-radius: 0px 8px 8px 0px;
+        border-radius: 0px;
 	      background-color: #${config.colorScheme.palette.base00};
-        padding: 8px 16px 6px 0px;
+        padding: 8px 10px 6px 10px;
         color: #${config.colorScheme.palette.base0B};
         font-size: 17px;
       }
 
       #pulseaudio{
         margin-top: 8px;
-        margin-right: 8px;
-        border-radius: 8px;
+        border-radius: 0px;
 	      background-color: #${config.colorScheme.palette.base00};
-        padding: 8px 16px 6px 16px;
+        padding: 8px 16px 6px 10px;
         background-color: #${config.colorScheme.palette.base00};
         color: #${config.colorScheme.palette.base0A};
         font-size: 20px;
@@ -92,9 +90,9 @@
       #network{
         margin-top: 8px;
         margin-right: 8px;
-        border-radius: 8px;
+        border-radius: 0px 8px 8px 0px;
 	      background-color: #${config.colorScheme.palette.base00};
-        padding: 8px 16px 6px 16px;
+        padding: 8px 16px 6px 10px;
         font-size: 18px;
         color: #${config.colorScheme.palette.base0E};
       }
@@ -154,7 +152,7 @@
       };
 
       "clock" = {
-        format = "{:  <span color='#${config.colorScheme.palette.base06}'>%H:%M</span>   |     <span color='#${config.colorScheme.palette.base06}'>%a, %b %d</span>}";
+        format = "{:  <span color='#${config.colorScheme.palette.base07}'>%H:%M</span>   |     <span color='#${config.colorScheme.palette.base07}'>%a, %b %d</span>}";
         tooltip-format = "<tt>{calendar}</tt>";
         calendar = {
           format = { today = "<span color='#${config.colorScheme.palette.base0E}'><b><u>{}</u></b></span>"; };
