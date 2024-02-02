@@ -6,7 +6,7 @@
     enable = true;
     style = ''
       window#waybar {
-	 background-color: transparent;
+	        background-color: transparent;
           font-family: "Lato";
       }
 
@@ -14,8 +14,8 @@
           margin-top: 8px;
           margin-left: 8px;
           border-radius: 8px;
-          background-color: #282828;
-          color: #458588;
+          background-color: #${config.colorScheme.palette.base00};
+          color: #${config.colorScheme.palette.base0D};
           font-size: 20px;
           padding: 8px 22px 6px 14px;
       }
@@ -24,32 +24,32 @@
         margin-top: 8px;
         margin-left: 8px;
         border-radius: 8px;
-	background-color: #282828;
-	padding: 4px;
+	      background-color: #${config.colorScheme.palette.base00};
+	      padding: 4px;
         font-size: 14px;    
       }
 
       #workspaces button {
-        color: #ebdbb2;
+        color: #${config.colorScheme.palette.base06};
         padding: 5px 11px 2px 9px;
       }
 
       #workspaces button:hover {
-        background: #7c6f64;
+        background: #${config.colorScheme.palette.base03};
       }
 
       #workspaces button.active{
         border-radius: 12px;
-        background-color: #689d6a;
+        background-color: #${config.colorScheme.palette.base0C};
       }
 
       #clock {
         margin-top: 8px;
         margin-left: 8px;
         border-radius: 8px;
-	background-color: #282828;
-	padding: 6px 8px 4px 8px;
-        color: #d65d0e;
+	      background-color: #${config.colorScheme.palette.base00};
+	      padding: 6px 8px 4px 8px;
+        color: #${config.colorScheme.palette.base09};
         font-size: 11px;
         font-weight: bold;
       }
@@ -62,9 +62,9 @@
         margin-top: 8px;
         margin-right: 0px;
         border-radius: 8px 0px 0px 8px;
-	background-color: #282828;
+	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 16px;
-        color: #98971a;
+        color: #${config.colorScheme.palette.base0B};
         font-size: 17px;
       }
 
@@ -72,9 +72,9 @@
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 0px 8px 8px 0px;
-	background-color: #282828;
+	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 0px;
-        color: #98971a;
+        color: #${config.colorScheme.palette.base0B};
         font-size: 17px;
       }
 
@@ -82,10 +82,10 @@
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 8px;
-	background-color: #282828;
+	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 16px;
-        background-color: #282828;
-        color: #b57614;
+        background-color: #${config.colorScheme.palette.base00};
+        color: #${config.colorScheme.palette.base0A};
         font-size: 20px;
       }
 
@@ -93,19 +93,19 @@
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 8px;
-	background-color: #282828;
+	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 16px;
         font-size: 18px;
-        color: #8f3f71;
+        color: #${config.colorScheme.palette.base0E};
       }
 
       #custom-power {
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 8px;
-        color: #cc241d; 
+        color: #${config.colorScheme.palette.base08}; 
         padding: 6px 19px 6px 15px;
-        background-color: #282828;
+        background-color: #${config.colorScheme.palette.base00};
         font-size: 15px;
       }
     '';
@@ -128,7 +128,7 @@
         "cpu"
         "memory"
         "pulseaudio"
-        "networks"
+        "network"
         "custom/power"
       ];
 
@@ -154,10 +154,10 @@
       };
 
       "clock" = {
-        format = "{:  <span color='#ebdbb2'>%H:%M</span>   |     <span color='#ebdbb2'>%a, %b %d</span>}";
+        format = "{:  <span color='#${config.colorScheme.palette.base06}'>%H:%M</span>   |     <span color='#${config.colorScheme.palette.base06}'>%a, %b %d</span>}";
         tooltip-format = "<tt>{calendar}</tt>";
         calendar = {
-          format = { today = "<span color='#ff6699'><b><u>{}</u></b></span>"; };
+          format = { today = "<span color='#${config.colorScheme.palette.base0E}'><b><u>{}</u></b></span>"; };
           mode = "month";
           on-scroll = 1;
         };
