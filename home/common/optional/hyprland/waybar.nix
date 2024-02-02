@@ -113,15 +113,16 @@
     settings.mainBar = {
       layer = "bottom";
       position = "top";
-      # height = 30;
 
       modules-left = [
-        "custom/arch" 
+        "custom/nix" 
         "hyprland/workspaces" 
       ];
+
       modules-center = [ 
         "clock" 
       ];
+
       modules-right = [
         "tray"
         "cpu"
@@ -131,72 +132,72 @@
         "custom/power"
       ];
 
-    "custom/arch"  = {
-      "format": "",
-    };
-    "custom/power" = {
-      "format": "⏻",
-      "on-click": "systemctl suspend"
-    };
-    "hyprland/workspaces" = {
-      "all-outputs": true,
-      "format": "{icon}",
-      "format-icons": {
-        "1": "",
-        "2": "󰈹" ,
-        "3": "",
-        "4": "󰝚",
-        "5": "",
-        "6": "",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "10": "10",
-      }
-    };
-    "memory" = {
-      "format": "  {icon}",
-      "format-icons": [
-        "▁",
-        "▂",
-        "▃",
-        "▄",
-        "▅",
-        "▆",
-        "▇",
-        "█"
-      ]
-    };
-    "network" = {
-      "format": "󰈁",
-      "format-disconnected": "󰖪",
-      "format-ethernet": "󰈁",
-      "format-icons": [
-        "󰤯",
-        "󰤟",
-        "󰤢",
-        "󰤥",
-        "󰤨"
-      ],
-      "format-wifi": "{icon}",
-      "on-click": "$HOME/.config/rofi/nm.sh",
-      "tooltip": true,
-      "tooltip-format": "{essid}\n{signalStrength} UP:{bandwidthUpBytes} DOWN:{bandwidthDownBytes}"
-    };
-"pulseaudio" = {
-      "format": "{icon}",
-      "format-icons": [
-        "",
-        "",
-        "󰕾",
-        ""
-      ],
-      "format-muted": "󰸈",
-      "tooltip": true,
-      "tooltip-format": "{volume}%"
-    };
-    };
+      "custom/nix"  = {
+        format = "";
+      };
 
+      "hyprland/workspaces" = {
+        all-outputs = true;
+        format = "{icon}";
+        format-icons = {
+          "1" = "";
+          "2" = "󰈹";
+          "3" = "";
+          "4" = "󰝚";
+          "5" = "";
+          "6" = "";
+          "7" = "7";
+          "8" = "8";
+          "9" = "9";
+          "10" = "10";
+        };
+      };
+
+      "clock" = {
+        format = "{:  <span color='#ebdbb2'>%H:%M</span>   |     <span color='#ebdbb2'>%a, %b %d</span>}";
+        tooltip-format = "<tt>{calendar}</tt>";
+        calendar = {
+          format = { today = "<span color='#ff6699'><b><u>{}</u></b></span>"; };
+          mode = "month";
+          on-scroll = 1;
+        };
+      };
+
+      "cpu" = {
+        format = "󰍛  {icon}";
+        format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+      };
+
+      "memory" = {
+        format = "  {icon}";
+        format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+      };
+
+      "pulseaudio" = {
+        format = "{icon}";
+        format-icons = [ "" "" "󰕾" "" ];
+        format-muted = "󰸈";
+        tooltip = true;
+        tooltip-format = "{volume}%";
+      };
+
+      "network" = {
+        format = "󰈁";
+        format-disconnected = "󰖪";
+        format-ethernet = "󰈁";
+        format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+        format-wifi = "{icon}";
+        on-click = "$HOME/.config/rofi/nm.sh";
+        tooltip = true;
+        tooltip-format = "{essid}\n{signalStrength} UP:{bandwidthUpBytes} DOWN:{bandwidthDownBytes}";
+      };
+
+      "custom/power" = {
+        format = "⏻";
+        on-click = "systemctl suspend";
+      };
+
+    };
 
   };
 
