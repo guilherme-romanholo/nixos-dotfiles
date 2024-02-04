@@ -16,7 +16,7 @@
           border-radius: 8px;
           background-color: #${config.colorScheme.palette.base00};
           color: #${config.colorScheme.palette.base0D};
-          font-size: 20px;
+          font-size: 18px;
           padding: 8px 22px 6px 14px;
       }
 
@@ -50,7 +50,7 @@
 	      background-color: #${config.colorScheme.palette.base00};
 	      padding: 6px 8px 4px 8px;
         color: #${config.colorScheme.palette.base09};
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
       }
 
@@ -65,7 +65,7 @@
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 10px 6px 16px;
         color: #${config.colorScheme.palette.base0B};
-        font-size: 17px;
+        font-size: 15px;
       }
 
       #memory {
@@ -74,7 +74,7 @@
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 10px 6px 10px;
         color: #${config.colorScheme.palette.base0B};
-        font-size: 17px;
+        font-size: 15px;
       }
 
       #pulseaudio{
@@ -84,7 +84,7 @@
         padding: 8px 16px 6px 10px;
         background-color: #${config.colorScheme.palette.base00};
         color: #${config.colorScheme.palette.base0A};
-        font-size: 20px;
+        font-size: 16px;
       }
 
       #network{
@@ -93,7 +93,7 @@
         border-radius: 0px 8px 8px 0px;
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 10px;
-        font-size: 18px;
+        font-size: 16px;
         color: #${config.colorScheme.palette.base0E};
       }
 
@@ -180,9 +180,9 @@
       };
 
       "network" = {
-        format = "󰈁";
+        format = "󰈀";
         format-disconnected = "󰖪";
-        format-ethernet = "󰈁";
+        format-ethernet = "󰈀";
         format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
         format-wifi = "{icon}";
         on-click = "$HOME/.config/rofi/nm.sh";

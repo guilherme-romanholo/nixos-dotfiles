@@ -7,6 +7,7 @@
   # You can import other home-manager modules here
   imports = [
     ./common/global
+    ./common/desktops/hyprland
   ];
 
   # Add stuff for your user as you see fit:

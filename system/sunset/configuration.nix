@@ -13,6 +13,8 @@
       ../common/global
       ../common/optional/cups.nix
       ../common/optional/xserver.nix
+      ../common/optional/hyprland.nix
+      ../common/optional/virtualization.nix
     ];
 
   # Bootloader.
