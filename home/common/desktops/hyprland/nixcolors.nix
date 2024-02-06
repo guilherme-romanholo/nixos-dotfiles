@@ -3,8 +3,8 @@
 
 let
   gruvbox-theme = {
-     slug = "Gruvbox Dark";
-     name = "gruvbox-dark-medium";
+     slug = "gruvbox-dark";
+     name = "Gruvbox Dark";
      palette = {
        base00 = "282828"; # ----
        base01 = "3c3836"; # ---
