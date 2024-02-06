@@ -83,7 +83,10 @@
       "$mod, M, exit"
       "$mod, Q, killactive"
       "$mod, Return, exec, ${pkgs.kitty}/bin/kitty"
+      "$mod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty --class termfloat"
       "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
+      "$mod, A, exec, ${pkgs.rofi}/bin/rofi -show drun -show-icons"
+      "$mod, L, exec, ${pkgs.swaylock-effects}/bin/swaylock"
     ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
@@ -100,6 +103,15 @@
           )
           10)
       );
+
+    windowrule = [
+      # Kitty
+      "opacity 0.8,^(kitty)$"
+      # Float Terminal
+      "float,^(termfloat)$"
+      "size 800 500,^(termfloat)$"
+      "move center,^(termfloat)$"
+    ];
   };
 
 }

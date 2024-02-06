@@ -10,6 +10,14 @@
           font-family: "Lato";
       }
 
+      tooltip {
+          background-color: #${config.colorScheme.palette.base00};
+      }
+
+      tooltip label {
+          color: #${config.colorScheme.palette.base07};
+      }
+
       #custom-nix{
           margin-top: 8px;
           margin-left: 8px;
@@ -56,6 +64,12 @@
 
       #tray {
         font-size: 20px;
+        margin-top: 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+        padding: 8px 12px 6px 13px;
+	      background-color: #${config.colorScheme.palette.base00};
+	      color: #${config.colorScheme.palette.base00};
       }
 
       #cpu{
