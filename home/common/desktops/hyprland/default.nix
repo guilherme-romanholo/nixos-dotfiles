@@ -1,11 +1,11 @@
 {
 
   imports = [
-    ./configs/hyprconf.nix
-    ./configs/waybar.nix
-    ./configs/rofi.nix
-    ./configs/swaylock.nix
-    ./configs/nixcolors.nix
+    ./hyprconf.nix
+    ./waybar.nix
+    ./rofi.nix
+    ./swaylock.nix
+    ./nixcolors.nix
   ];
 
 }

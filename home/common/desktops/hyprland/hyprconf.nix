@@ -14,7 +14,7 @@
 
     exec-once = [
       "${pkgs.waybar}/bin/waybar"
-      "${pkgs.swaybg}/bin/swaybg -i ${toString ../wallpapers/gruv_city.png}"
+      "${pkgs.swaybg}/bin/swaybg -i ${toString ../../wallpapers/gruv_city.png}"
     ];
 
     input = {
