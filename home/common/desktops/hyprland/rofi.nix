@@ -27,8 +27,8 @@
     theme = let inherit (config.lib.formats.rasi) mkLiteral; in {
       "*" = {
         font = "Noto Sans CJK JP Bold 12";
-        background-color = mkLiteral "#${config.colorScheme.palette.base00}20";
-        foreground = mkLiteral "#${config.colorScheme.palette.base05}20";
+        background-color = mkLiteral "#${config.colorScheme.palette.base00}60";
+        foreground = mkLiteral "#${config.colorScheme.palette.base00}60";
         text-color = mkLiteral "#${config.colorScheme.palette.base05}";
       };
 
@@ -72,7 +72,7 @@
       };
 
       "element selected.normal" = {
-        background-color = mkLiteral "#${config.colorScheme.palette.base02}";
+        background-color = mkLiteral "#${config.colorScheme.palette.base03}";
       };
     };
   };

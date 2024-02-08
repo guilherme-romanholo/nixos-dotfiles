@@ -10,10 +10,10 @@
   # Enable networking
   networking = {
     networkmanager.enable = true;
-    extraHosts = ''
-      200.145.216.180 pdns.acmesecurity.org
-      200.145.216.180 grafana.pdns.acmesecurity.org
-    '';
+#    extraHosts = ''
+#      200.145.216.180 pdns.acmesecurity.org
+#      200.145.216.180 grafana.pdns.acmesecurity.org
+#    '';
   };
 
 
