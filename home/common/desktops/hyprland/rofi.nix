@@ -29,6 +29,8 @@
 
       "window" = {
         border-radius = mkLiteral "7px";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "var(foreground)";
         width = mkLiteral "50%";
         padding = mkLiteral "32px";
       };
