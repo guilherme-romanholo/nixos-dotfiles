@@ -10,6 +10,7 @@
     ripgrep
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     swaybg
+    ngrok
   ];
 
 }
