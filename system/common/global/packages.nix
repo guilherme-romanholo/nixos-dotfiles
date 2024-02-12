@@ -12,4 +12,6 @@
     gcc
   ];
 
+  programs.zsh.enable = true;
+
 }
