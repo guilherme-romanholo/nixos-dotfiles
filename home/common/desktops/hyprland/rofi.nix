@@ -21,6 +21,7 @@
       "*" = {
         background = mkLiteral "#${config.colorScheme.palette.base00}";
         foreground = mkLiteral "#${config.colorScheme.palette.base06}";
+        border = mkLiteral "#${config.colorScheme.palette.base03}";
         selected = mkLiteral "#${config.colorScheme.palette.base01}";
 
         background-color = mkLiteral "var(background)";
@@ -30,7 +31,7 @@
       "window" = {
         border-radius = mkLiteral "7px";
         border = mkLiteral "2px solid";
-        border-color = mkLiteral "var(foreground)";
+        border-color = mkLiteral "var(border)";
         width = mkLiteral "50%";
         padding = mkLiteral "32px";
       };
