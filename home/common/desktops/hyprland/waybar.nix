@@ -182,7 +182,7 @@
       };
 
       "clock" = {
-        format = "{:  <span color='#${config.colorScheme.palette.base07}'>%H:%M</span>   |     <span color='#${config.colorScheme.palette.base07}'>%a, %b %d</span>}";
+        format = "{:  <span color='#${config.colorScheme.palette.base07}'>%H:%M</span>      <span color='#${config.colorScheme.palette.base07}'>%a, %b %d</span>}";
         tooltip-format = "<tt>{calendar}</tt>";
         calendar = {
           format = { today = "<span color='#${config.colorScheme.palette.base0E}'><b><u>{}</u></b></span>"; };
