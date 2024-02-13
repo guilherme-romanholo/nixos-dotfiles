@@ -22,7 +22,7 @@
           margin-top: 8px;
           margin-left: 8px;
           border-radius: 8px;
-          border: 1.5px solid #${config.colorScheme.palette.base03};
+          border: 1.5px solid #${config.colorScheme.palette.base04};
           background-color: #${config.colorScheme.palette.base00};
           color: #${config.colorScheme.palette.base0D};
           font-size: 18px;
@@ -33,7 +33,7 @@
         margin-top: 8px;
         margin-left: 8px;
         border-radius: 8px;
-        border: 1.5px solid #${config.colorScheme.palette.base03};
+        border: 1.5px solid #${config.colorScheme.palette.base04};
 	      background-color: #${config.colorScheme.palette.base00};
 	      padding: 4px;
         font-size: 14px;    
@@ -57,7 +57,7 @@
         margin-top: 8px;
         margin-left: 8px;
         border-radius: 8px;
-        border: 1.5px solid #${config.colorScheme.palette.base03};
+        border: 1.5px solid #${config.colorScheme.palette.base04};
 	      background-color: #${config.colorScheme.palette.base00};
 	      padding: 6px 8px 4px 8px;
         color: #${config.colorScheme.palette.base09};
@@ -70,7 +70,7 @@
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 8px;
-        border: 1.5px solid #${config.colorScheme.palette.base03};
+        border: 1.5px solid #${config.colorScheme.palette.base04};
         padding: 8px 12px 6px 13px;
 	      background-color: #${config.colorScheme.palette.base00};
 	      color: #${config.colorScheme.palette.base00};
@@ -82,7 +82,7 @@
         border-radius: 8px 0px 0px 8px;
         border-width: 1.5px 0px 1.5px 1.5px;
         border-style: solid;
-        border-color: #${config.colorScheme.palette.base03};
+        border-color: #${config.colorScheme.palette.base04};
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 10px 6px 16px;
         color: #${config.colorScheme.palette.base0B};
@@ -94,7 +94,7 @@
         border-radius: 0px;
         border-width: 1.5px 0px 1.5px 0px;
         border-style: solid;
-        border-color: #${config.colorScheme.palette.base03};
+        border-color: #${config.colorScheme.palette.base04};
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 10px 6px 10px;
         color: #${config.colorScheme.palette.base0B};
@@ -106,8 +106,7 @@
         border-radius: 0px;
         border-width: 1.5px 0px 1.5px 0px;
         border-style: solid;
-        border-color: #${config.colorScheme.palette.base03};
-	      background-color: #${config.colorScheme.palette.base00};
+        border-color: #${config.colorScheme.palette.base04};
         padding: 8px 16px 6px 10px;
         background-color: #${config.colorScheme.palette.base00};
         color: #${config.colorScheme.palette.base0A};
@@ -120,7 +119,7 @@
         border-radius: 0px 8px 8px 0px;
         border-width: 1.5px 1.5px 1.5px 0px;
         border-style: solid;
-        border-color: #${config.colorScheme.palette.base03};
+        border-color: #${config.colorScheme.palette.base04};
 	      background-color: #${config.colorScheme.palette.base00};
         padding: 8px 16px 6px 10px;
         font-size: 16px;
@@ -131,7 +130,7 @@
         margin-top: 8px;
         margin-right: 8px;
         border-radius: 8px;
-        border: 1.5px solid #${config.colorScheme.palette.base03};
+        border: 1.5px solid #${config.colorScheme.palette.base04};
         color: #${config.colorScheme.palette.base08}; 
         padding: 6px 19px 6px 15px;
         background-color: #${config.colorScheme.palette.base00};

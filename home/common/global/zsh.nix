@@ -40,8 +40,10 @@
 
     shellAliases = {
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
+      dotfiles = "z ~/.dotfiles";
       cat = "bat";
       cd = "z";
+      vim = "nvim";
     };
   };
 

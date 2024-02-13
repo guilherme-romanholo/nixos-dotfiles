@@ -21,7 +21,7 @@
       "*" = {
         background = mkLiteral "#${config.colorScheme.palette.base00}";
         foreground = mkLiteral "#${config.colorScheme.palette.base06}";
-        border = mkLiteral "#${config.colorScheme.palette.base03}";
+        border = mkLiteral "#${config.colorScheme.palette.base04}";
         selected = mkLiteral "#${config.colorScheme.palette.base01}";
 
         background-color = mkLiteral "var(background)";
