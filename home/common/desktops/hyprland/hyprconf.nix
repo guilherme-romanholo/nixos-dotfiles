@@ -13,7 +13,7 @@
     "$mod" = "SUPER";
 
     exec = [
-      "${pkgs.swaybg}/bin/swaybg -i ${toString ../../wallpapers/gruv_road.png}"
+      "${pkgs.swaybg}/bin/swaybg -i ${toString ../../files/wallpapers/gruvbox/gruv_road.png}"
     ];
 
     exec-once = [
