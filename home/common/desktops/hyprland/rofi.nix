@@ -20,7 +20,6 @@
 
       "*" = {
         background = mkLiteral "#${config.colorScheme.palette.base00}";
-        background-blur = mkLiteral "#${config.colorScheme.palette.base00}60";
         foreground = mkLiteral "#${config.colorScheme.palette.base06}";
         border = mkLiteral "#${config.colorScheme.palette.base04}";
         selected = mkLiteral "#${config.colorScheme.palette.base01}";
@@ -33,7 +32,7 @@
         border-radius = mkLiteral "7px";
         border = mkLiteral "2px solid";
         border-color = mkLiteral "var(border)";
-        background-color = mkLiteral "var(background-blur)";
+        background-color = mkLiteral "var(background)";
         width = mkLiteral "50%";
         padding = mkLiteral "32px";
       };
