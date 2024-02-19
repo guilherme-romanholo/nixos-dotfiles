@@ -11,6 +11,8 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     swaybg
     ngrok
+    webcord
+    kdiskmark
   ];
 
 }
