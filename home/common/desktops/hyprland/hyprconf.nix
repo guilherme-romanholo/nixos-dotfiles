@@ -85,6 +85,7 @@
     bind = [
       "$mod, M, exit"
       "$mod, Q, killactive"
+      "ALT, return, fullscreen"
       "$mod, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty --class termfloat"
       "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
@@ -106,6 +107,11 @@
           )
           10)
       );
+
+    bindm = [
+      "$mod, mouse:272, movewindow"
+      "$mod, mouse:273, resizewindow"
+    ];
 
     windowrule = [
       # Kitty
