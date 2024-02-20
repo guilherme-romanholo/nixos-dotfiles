@@ -18,8 +18,10 @@
     inherit (self) outputs;
   in {
 
+    # Code templates module import
     templates = import ./templates;
 
+    # Hosts modules import
     nixosConfigurations = {
       taz = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
