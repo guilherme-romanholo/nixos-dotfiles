@@ -20,8 +20,10 @@
       {
         packages = {
           myapp = mkPoetryApplication { 
-            projectDir = self;
+            projectDir = ./my-project;
+            preferWheels = true;
             propagatedBuildInputs = with pkgs; [
+              zdns
               jetbrains.pycharm-community
             ]; 
           };
