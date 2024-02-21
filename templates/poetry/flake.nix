@@ -14,7 +14,10 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         # see https://github.com/nix-community/poetry2nix/tree/master#api for more functions and examples.
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          # config.allowUnfree = true;
+        };
         inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; }) mkPoetryApplication;
       in
       {
@@ -24,7 +27,7 @@
             preferWheels = true;
             propagatedBuildInputs = with pkgs; [
               zdns
-              jetbrains.pycharm-community
+              # jetbrains.pycharm-professional
             ]; 
           };
           default = self.packages.${system}.myapp;
