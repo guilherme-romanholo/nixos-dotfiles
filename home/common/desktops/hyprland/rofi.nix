@@ -12,7 +12,7 @@
         modi = "drun";
         font = "Rubik 10";
         show-icons = true;
-        icons-theme = "Reversal-dark";
+        icons-theme = "Gruvbox";
         display-drun = "";
         drun-display-format = "{name}";
         sidebar-mode = false;
