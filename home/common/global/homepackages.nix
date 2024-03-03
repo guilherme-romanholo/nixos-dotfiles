@@ -13,6 +13,7 @@
     ngrok
     webcord
     kdiskmark
+    pkgs.jetbrains.idea-ultimate
   ];
 
 }
