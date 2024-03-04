@@ -20,6 +20,8 @@
             {
               nativeBuildInputs = with pkgs; [
                 gradle
+                openjdk
+                kotlin
                 jetbrains.idea-ultimate
               ];
             };
