@@ -8,6 +8,7 @@
   imports = [
     ./common/global
     ./common/desktops/hyprland
+    ./common/desktops/plasma5
   ];
 
   # Add stuff for your user as you see fit:

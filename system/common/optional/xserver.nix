@@ -1,17 +1,26 @@
+{ pkgs, ... }:
 
 {
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable GDM Display Manager
-  services.xserver.displayManager.gdm = {
-    enable = true;
-    wayland = true;
+  # Enable SDDM Display Manager
+  services.xserver.displayManager = {
+    sddm.enable = true;
+    session = [
+      {
+        manage = "desktop";
+        name = "plasma";
+        start = ''exec env KDEWM=${pkgs.bspwm}/bin/bspwm ${pkgs.plasma-workspace}/bin/startplasma-x11'';
+      }
+    ];
   };
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.desktopManager.gnome.enable = true;
+  # Enable the Plasma5 Desktop Environment.
+  services.xserver.desktopManager.plasma5.enable = true;
+  # Enable the Bspwm Window Manager.
+  services.xserver.windowManager.bspwm.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
