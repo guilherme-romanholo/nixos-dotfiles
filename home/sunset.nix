@@ -9,6 +9,7 @@
     ./common/global
     ./common/desktops/hyprland
     ./common/desktops/plasma5
+    ./common/optional/vscode.nix
   ];
 
   # Add stuff for your user as you see fit:
