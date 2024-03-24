@@ -7,8 +7,8 @@
   # You can import other home-manager modules here
   imports = [
     ./common/global
-    ./common/desktops/hyprland
-    ./common/desktops/plasma5
+    ./common/optional/hyprland
+    ./common/optional/plasma5
     ./common/optional/vscode.nix
   ];
 
