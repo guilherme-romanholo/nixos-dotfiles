@@ -5,7 +5,10 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./lsp.nix
+    ./lspkind.nix
     ./cmp.nix
+    ./luasnip.nix
+    ./neotree.nix
   ];
 
   programs.nixvim = {
@@ -24,15 +27,11 @@
 
       nvim-autopairs.enable = true;
 
-      luasnip = {
-	enable = true;
-	extraConfig = {
-	  enable_autosnippets = true;
-	  store_selection_keys = "<Tab>";
-	};
-      };
-
     };
+
+    globals.mapleader = " ";
+
+
   };
 	
 }
