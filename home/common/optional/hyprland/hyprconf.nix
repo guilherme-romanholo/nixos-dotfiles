@@ -29,7 +29,7 @@
     monitor = [ "VGA-1,preferred,1680x0,1" "DP-2,preferred,0x0,1" ];
 
     general = {
-      gaps_in = 4;
+      gaps_in = 2;
       gaps_out = 8;
       border_size = 2;
       layout = "dwindle";
