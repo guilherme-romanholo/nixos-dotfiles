@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, packages, ... }:
 
 {
 
@@ -7,7 +7,10 @@
 
   # Enable SDDM Display Manager
   services.xserver.displayManager = {
-    sddm.enable = true;
+    sddm = {
+      enable = true;
+      #theme = "${pkgs.sddm-theme}";
+    };
     session = [
       {
         manage = "desktop";
