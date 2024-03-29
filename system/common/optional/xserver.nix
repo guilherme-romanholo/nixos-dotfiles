@@ -1,4 +1,4 @@
-{ pkgs, packages, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -9,7 +9,7 @@
   services.xserver.displayManager = {
     sddm = {
       enable = true;
-      #theme = "${pkgs.sddm-theme}";
+      # theme = "${pkgs.sddm-theme}";
     };
     session = [
       {

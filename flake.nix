@@ -44,6 +44,8 @@
     templates = import ./templates;
     # My packages
     packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
+    # Your custom packages and modifications, exported as overlays
+    overlays = import ./overlays {inherit inputs;};
 
     # Hosts modules import
     nixosConfigurations = {
