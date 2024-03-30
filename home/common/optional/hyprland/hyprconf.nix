@@ -91,6 +91,8 @@
       "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
       "$mod, A, exec, ${pkgs.rofi}/bin/rofi -show drun -show-icons"
       "$mod, L, exec, ${pkgs.swaylock-effects}/bin/swaylock"
+      ", print, exec, ${pkgs.grimblast}/bin/grimblast copy area"
+      "SHIFT, print, exec, ${pkgs.grimblast}/bin/grimblast copysave area"
     ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
