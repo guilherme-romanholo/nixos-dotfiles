@@ -18,7 +18,7 @@
         start = ''exec env KDEWM=${pkgs.bspwm}/bin/bspwm ${pkgs.plasma-workspace}/bin/startplasma-x11'';
       }
     ];
-    defaultSession = "Hyprland";
+    defaultSession = "hyprland";
   };
 
   # Enable the Plasma5 Desktop Environment.
