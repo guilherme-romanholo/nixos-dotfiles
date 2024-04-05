@@ -9,7 +9,7 @@
   services.xserver.displayManager = {
     sddm = {
       enable = true;
-      # theme = "${pkgs.sddm-theme}";
+      theme = "${pkgs.sddm-theme}";
     };
     session = [
       {
@@ -18,6 +18,7 @@
         start = ''exec env KDEWM=${pkgs.bspwm}/bin/bspwm ${pkgs.plasma-workspace}/bin/startplasma-x11'';
       }
     ];
+    defaultSession = "Hyprland";
   };
 
   # Enable the Plasma5 Desktop Environment.

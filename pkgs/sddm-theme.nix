@@ -1,9 +1,12 @@
 { pkgs }:
 
+let 
+  image = ../home/common/files/wallpapers/gruvbox/gruv_lights.jpg;
+in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
 
-  src = {
+  src = pkgs.fetchFromGitHub {
     owner = "MarianArlt";
     repo = "sddm-sugar-dark";
     rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
@@ -13,6 +16,9 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
+    cd $out/
+    rm Background.jpg
+    cp -r ${image} $out/Background.jpg
   '';
 
 }

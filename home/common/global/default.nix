@@ -3,7 +3,7 @@
  
   imports = [
     ./git.nix
-    ./firefox.nix
+    # ./firefox.nix
     ./general.nix
     ./homepackages.nix
     ./vars.nix

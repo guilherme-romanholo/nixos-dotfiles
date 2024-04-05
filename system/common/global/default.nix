@@ -1,3 +1,4 @@
+{ outputs, ... }:
 
 {
 
@@ -11,5 +12,12 @@
     ./users.nix
     ./homemanager.nix
   ];
+
+  nixpkgs = {
+    overlays = builtins.attrValues outputs.overlays;
+    config = {
+      allowUnfree = true;
+    };
+  };
 
 }
