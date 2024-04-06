@@ -222,7 +222,7 @@
 
       "custom/power" = {
         format = "⏻";
-        on-click = "systemctl suspend";
+        on-click = "${pkgs.swaylock-effects}/bin/swaylock --daemonize && systemctl suspend";
       };
 
     };
