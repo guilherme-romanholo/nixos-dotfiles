@@ -24,13 +24,11 @@
 
     plugins = {
       lualine.enable = true;
-
       nvim-autopairs.enable = true;
-
+      persistence.enable = true;
     };
 
     globals.mapleader = " ";
-
 
   };
 	

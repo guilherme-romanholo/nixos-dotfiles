@@ -1,7 +1,7 @@
 { pkgs }:
 
 let 
-  image = ../home/common/files/wallpapers/gruvbox/gruv_lights.jpg;
+  image = ../home/common/files/wallpapers/gruvbox/gruv_village.png;
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
