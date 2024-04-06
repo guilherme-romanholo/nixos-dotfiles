@@ -51,6 +51,7 @@
       cat = "bat";
       cd = "z";
       vim = "nvim";
+      gs = "git status";
     };
   };
 
