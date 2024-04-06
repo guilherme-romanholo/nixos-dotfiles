@@ -16,8 +16,8 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
-    cd $out/
-    rm Background.jpg
+    rm $out/Background.jpg
+    sed -i 's/ForceHideCompletePassword=false/ForceHideCompletePassword=true/' $out/theme.conf
     cp -r ${image} $out/Background.jpg
   '';
 
