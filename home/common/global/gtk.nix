@@ -12,7 +12,7 @@
 
     iconTheme = {
       name = "Gruvbox";
-      package = pkgs.gruvbox-dark-icons-gtk;
+      package = pkgs.papirus-icon-theme;
     };
   };
 

@@ -16,6 +16,4 @@
     '';
   };
 
-  users.users.guilherme.extraGroups = [ "networkmanager" ];
-
 }

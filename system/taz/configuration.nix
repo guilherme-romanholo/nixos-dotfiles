@@ -8,13 +8,20 @@
   networking.hostName = "taz"; 
 
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
+      # Hardware configuration
       ./hardware-configuration.nix
+      # Global
       ../common/global
+      # Optional
       ../common/optional/openssh.nix
       ../common/optional/hyprland.nix
       ../common/optional/xserver.nix
       ../common/optional/docker.nix
+      # System settings
+      ../common/settings
+      # User
+      ../common/users/guilherme.nix
     ];
 
   # Bootloader.

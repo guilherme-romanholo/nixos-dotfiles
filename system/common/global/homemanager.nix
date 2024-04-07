@@ -8,10 +8,8 @@
   ];
 
   home-manager = {
+    useUserPackages = true;
     extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      guilherme = import ../../../home/${config.networking.hostName}.nix;
-    };
   };
 
 }
