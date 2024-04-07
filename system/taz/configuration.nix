@@ -15,7 +15,6 @@
       ../common/global
       # Optional
       ../common/optional/openssh.nix
-      ../common/optional/hyprland.nix
       ../common/optional/xserver.nix
       ../common/optional/docker.nix
       # System settings

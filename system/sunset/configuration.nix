@@ -11,7 +11,6 @@
       ../common/global
       # Optional 
       ../common/optional/cups.nix
-      ../common/optional/hyprland.nix
       ../common/optional/virtualization.nix
       ../common/optional/docker.nix
       # System settings
