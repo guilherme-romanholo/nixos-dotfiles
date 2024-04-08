@@ -48,7 +48,7 @@
     shellAliases = {
       nixos-switch = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       dots = "z ~/.dotfiles";
-      cat = "bat";
+      cat = "bat --theme=gruvbox-dark";
       cd = "z";
       vim = "nvim";
       gs = "git status";
