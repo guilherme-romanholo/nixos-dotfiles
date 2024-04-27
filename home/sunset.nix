@@ -7,7 +7,6 @@
   imports = [
     ./common/global
     ./common/optional/hyprland
-    ./common/optional/plasma5
     ./common/optional/vscode.nix
   ];
 

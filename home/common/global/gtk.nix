@@ -6,13 +6,13 @@
     enable = true;
 
     theme = {
-      name = "Gruvbox";
-      package = pkgs.gruvbox-gtk-theme;
+      name = "Ayu";
+      package = pkgs.ayu-theme-gtk;
     };
 
     iconTheme = {
-      name = "Gruvbox";
-      package = pkgs.papirus-icon-theme;
+      name = "Tela-Circle";
+      package = pkgs.tela-circle-icon-theme;
     };
   };
 

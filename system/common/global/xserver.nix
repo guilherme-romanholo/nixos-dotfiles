@@ -11,20 +11,11 @@
       enable = true;
       theme = "${pkgs.sddm-theme}";
     };
-    session = [
-      {
-        manage = "desktop";
-        name = "plasma";
-        start = ''exec env KDEWM=${pkgs.bspwm}/bin/bspwm ${pkgs.plasma-workspace}/bin/startplasma-x11'';
-      }
-    ];
     defaultSession = "hyprland";
   };
 
   # Enable the Plasma5 Desktop Environment.
-  services.xserver.desktopManager.plasma5.enable = true;
-  # Enable the Bspwm Window Manager.
-  services.xserver.windowManager.bspwm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {

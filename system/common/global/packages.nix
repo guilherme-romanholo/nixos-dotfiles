@@ -9,7 +9,7 @@
     wget
     firefox
     git
-    gcc
+    libsForQt5.qt5.qtgraphicaleffects
   ];
 
   programs.zsh.enable = true;

@@ -90,9 +90,22 @@
       "$mod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty --class termfloat"
       "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
       "$mod, A, exec, ${pkgs.rofi}/bin/rofi -show drun -show-icons"
-      "$mod, L, exec, ${pkgs.swaylock-effects}/bin/swaylock"
+      "$mod, N, exec, ${pkgs.swaylock-effects}/bin/swaylock"
       ", print, exec, ${pkgs.grimblast}/bin/grimblast copy area"
       "SHIFT, print, exec, ${pkgs.grimblast}/bin/grimblast copysave area"
+      "$mod, L, movefocus, l"
+      "$mod, H, movefocus, r"
+      "$mod, K, movefocus, u"
+      "$mod, J, movefocus, d"
+      "$mod, W, togglefloating"
+      "$mod SHIFT, L, moveactive, l, 30 0"
+      "$mod SHIFT, H, moveactive, r, -30 0"
+      "$mod SHIFT, K, moveactive, u, 0 -30"
+      "$mod SHIFT, J, moveactive, d, 0 30"
+      "$mod CTRL, L, resizeactive, l, 30 0"
+      "$mod CTRL, H, resizeactive, r, -30 0"
+      "$mod CTRL, K, resizeactive, u, 0 -30"
+      "$mod CTRL, J, resizeactive, d, 0 30"
     ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}

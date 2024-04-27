@@ -224,29 +224,6 @@
         "type": "github"
       }
     },
-    "plasma-manager": {
-      "inputs": {
-        "home-manager": [
-          "home-manager"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1711748679,
-        "narHash": "sha256-qaxqvAl4ngnTxXUX2P9ij/+bsCQaXtNcejziO6s0yY4=",
-        "owner": "pjones",
-        "repo": "plasma-manager",
-        "rev": "fb4a1cdd4e54d4a5fa4d9eddae052cb60844c104",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pjones",
-        "repo": "plasma-manager",
-        "type": "github"
-      }
-    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
@@ -304,8 +281,7 @@
         "home-manager": "home-manager",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim",
-        "plasma-manager": "plasma-manager"
+        "nixvim": "nixvim"
       }
     },
     "systems": {
