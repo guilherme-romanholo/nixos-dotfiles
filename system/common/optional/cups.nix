@@ -7,6 +7,8 @@
 
   services.printing.drivers = [ pkgs.gutenprint ];
 
+  services.sane.enable = true;
+
   services.avahi = {
     enable = true;
     nssmdns = true;
