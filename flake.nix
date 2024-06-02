@@ -31,6 +31,8 @@
     # ------ User Settings ------ #
     userSettings = {
       username = "guilherme";
+      email = "guilhermeromanholobofo@gmail.com";
+      gituser = "guilherme-romanholo";
     };
     # Supported systems for your flake packages, shell, etc.
     systems = [
@@ -63,7 +65,7 @@
     nixosConfigurations = {
       ${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         modules = [
-          ./nixos/${systemSettings.hostname}/configuration.nix
+          ./hosts/${systemSettings.hostname}/configuration.nix
         ];
         specialArgs = {
 	  inherit inputs;
