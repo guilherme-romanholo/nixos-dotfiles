@@ -22,6 +22,16 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    # ----- System Settings ----- #
+    systemSettings = {
+      hostname = "joule";
+      locale = "pt_BR.UTF-8";
+      timezone = "America/Sao_Paulo";
+    };
+    # ------ User Settings ------ #
+    userSettings = {
+      username = "guilherme";
+    };
     # Supported systems for your flake packages, shell, etc.
     systems = [
       "aarch64-linux"
@@ -51,11 +61,16 @@
 
     # NixOS configuration entrypoint
     nixosConfigurations = {
-      testvm = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+      ${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         modules = [
-          ./nixos/configuration.nix
+          ./nixos/${systemSettings.hostname}/configuration.nix
         ];
+        specialArgs = {
+	  inherit inputs;
+	  inherit outputs;
+	  inherit systemSettings;
+	  inherit userSettings;
+        };
       };
     };
   };

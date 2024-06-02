@@ -4,6 +4,7 @@
   lib,
   config,
   pkgs,
+  userSettings,
   ...
 }: {
   imports = [
@@ -26,11 +27,11 @@
   };
 
   home = {
-    username = "test";
-    homeDirectory = "/home/test";
+    username = userSettings.username;
+    homeDirectory = "/home/${userSettings.username}";
   };
 
-  home.packages = with pkgs; [ neofetch firefox ];
+  home.packages = with pkgs; [neofetch firefox];
 
   programs.git = {
     enable = true;

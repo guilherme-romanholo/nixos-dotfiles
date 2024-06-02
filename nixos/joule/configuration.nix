@@ -4,6 +4,8 @@
   lib,
   config,
   pkgs,
+  systemSettings,
+  userSettings,
   ...
 }: {
   imports = [
@@ -16,7 +18,7 @@
   gnome.enable = true;
 
   # Config hostname
-  networking.hostName = "testvm";
+  networking.hostName = systemSettings.hostname;
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -25,9 +27,13 @@
 
   # Home-manager configuration as module
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      test = import ../home-manager/home.nix;
+      ${userSettings.username} = import ../../home-manager/${systemSettings.hostname}.nix;
+    };
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit outputs;
+      inherit userSettings;
     };
   };
 
@@ -58,7 +64,7 @@
 
   # System users
   users.users = {
-    test = {
+    ${userSettings.username} = {
       initialPassword = "correcthorsebatterystaple";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
@@ -72,21 +78,21 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/Sao_Paulo";
+  time.timeZone = systemSettings.timezone;
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n.defaultLocale = systemSettings.locale;
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pt_BR.UTF-8";
-    LC_IDENTIFICATION = "pt_BR.UTF-8";
-    LC_MEASUREMENT = "pt_BR.UTF-8";
-    LC_MONETARY = "pt_BR.UTF-8";
-    LC_NAME = "pt_BR.UTF-8";
-    LC_NUMERIC = "pt_BR.UTF-8";
-    LC_PAPER = "pt_BR.UTF-8";
-    LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "pt_BR.UTF-8";
+    LC_ADDRESS = systemSettings.locale;
+    LC_IDENTIFICATION = systemSettings.locale;
+    LC_MEASUREMENT = systemSettings.locale;
+    LC_MONETARY = systemSettings.locale;
+    LC_NAME = systemSettings.locale;
+    LC_NUMERIC = systemSettings.locale;
+    LC_PAPER = systemSettings.locale;
+    LC_TELEPHONE = systemSettings.locale;
+    LC_TIME = systemSettings.locale;
   };
 
   # Configure console keymap
@@ -110,7 +116,7 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-     vim 
+    vim
   ];
 
   system.stateVersion = "23.11";

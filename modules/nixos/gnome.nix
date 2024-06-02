@@ -1,9 +1,13 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     gnome.enable = lib.mkEnableOption "enable gnome";
   };
-  
+
   config = lib.mkIf config.gnome.enable {
     # Enable the X11 windowing system.
     services.xserver.enable = true;
@@ -18,5 +22,4 @@
       xkbVariant = "";
     };
   };
-
 }
