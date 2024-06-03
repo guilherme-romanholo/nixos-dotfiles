@@ -2,3 +2,4 @@
 
 #### Hosts
 - **Joule:** Test Virtual Machine
+- **Volt:** Personal Machine

@@ -18,12 +18,13 @@
   gnome.enable = true;
 
   # --- Optional --- #
+  docker.enable = true;
+  libvirt.enable = true;
   printer.enable = true;
 
   # --- Bootloader --- #
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   environment.systemPackages = with pkgs; [
     vim

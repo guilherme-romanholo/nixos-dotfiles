@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   systemSettings,
@@ -27,5 +26,8 @@
       LC_TELEPHONE = systemSettings.locale;
       LC_TIME = systemSettings.locale;
     };
+
+    # Configure console keymap
+    console.keyMap = "br-abnt2";
   };
 }

@@ -68,10 +68,10 @@
           ./hosts/${systemSettings.hostname}/configuration.nix
         ];
         specialArgs = {
-	  inherit inputs;
-	  inherit outputs;
-	  inherit systemSettings;
-	  inherit userSettings;
+          inherit inputs;
+          inherit outputs;
+          inherit systemSettings;
+          inherit userSettings;
         };
       };
     };
