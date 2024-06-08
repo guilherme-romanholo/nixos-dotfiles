@@ -13,3 +13,4 @@
 #### Hosts
 - **Joule:** Test Virtual Machine
 - **Volt:** Personal Machine
+- **Watt:** WSL Config
