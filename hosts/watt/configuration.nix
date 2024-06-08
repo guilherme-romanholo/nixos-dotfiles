@@ -4,6 +4,7 @@
   lib,
   config,
   pkgs,
+  userSettings,
   ...
 }: {
   imports = [
@@ -16,6 +17,7 @@
 
   wsl = {
     enable = true;
+    defaultUser = userSettings.username;
     wslConf.automount.root = "/mnt";
     wslConf.interop.appendWindowsPath = false;
     wslConf.network.generateHosts = false;
