@@ -28,7 +28,7 @@
     inherit (self) outputs;
     # ----- System Settings ----- #
     systemSettings = {
-      hostname = "joule";
+      hostname = "volt";
       locale = "pt_BR.UTF-8";
       timezone = "America/Sao_Paulo";
     };
