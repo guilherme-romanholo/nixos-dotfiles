@@ -30,7 +30,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
   ];
 
   system.stateVersion = "24.05";

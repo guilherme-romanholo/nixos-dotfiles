@@ -8,9 +8,13 @@
 }: {
   imports = [
     outputs.homeManagerModules.common
+    outputs.homeManagerModules.optional
   ];
 
+  # --- Common --- #
   common.enable = true;
+
+  # --- Optional --- # 
 
   home.packages = with pkgs; [neofetch firefox];
 
