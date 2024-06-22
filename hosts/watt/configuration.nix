@@ -10,6 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.nixos-wsl.nixosModules.wsl
     outputs.nixosModules.common
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
@@ -28,7 +29,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
   ];
 
   system.stateVersion = "24.05";
