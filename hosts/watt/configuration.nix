@@ -15,6 +15,9 @@
     outputs.nixosModules.optional
   ];
 
+  # --- Common Modules --- #
+  common.enable = true;
+
   wsl = {
     enable = true;
     defaultUser = userSettings.username;

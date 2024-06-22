@@ -14,6 +14,9 @@
     outputs.nixosModules.optional
   ];
 
+  # --- Common Modules --- #
+  common.enable = true;
+
   # --- Desktops --- #
   gnome.enable = true;
 
