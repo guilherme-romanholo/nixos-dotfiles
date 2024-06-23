@@ -19,9 +19,9 @@
         extraGroups = ["wheel"];
         # Default shell
         shell = pkgs.zsh;
-	ignoreShellProgramCheck = true;
+        ignoreShellProgramCheck = true;
         # Add your SSH public key(s) here, if you plan on using SSH to connect
-        openssh.authorizedKeys.keys = [ ];
+        openssh.authorizedKeys.keys = [];
       };
     };
   };

@@ -14,7 +14,7 @@
   # --- Common --- #
   common.enable = true;
 
-  # --- Optional --- # 
+  # --- Optional --- #
 
   home.packages = with pkgs; [neofetch firefox];
 

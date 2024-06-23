@@ -1,4 +1,8 @@
-{lib, config, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   imports = [
     ./localtime.nix
     ./nixconf.nix
