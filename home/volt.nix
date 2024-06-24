@@ -28,6 +28,7 @@
 
     gnomeExtensions.user-themes
     gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-dock
     gnomeExtensions.pop-shell
   ];
 
@@ -39,12 +40,17 @@
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "appindicatorsupport@rgcjonas.gmail.com"
+	"dash-to-dock@micxgx.gmail.com"
 	"pop-shell@system76.com"
       ];
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Gruvbox-Dark-BL";
+      name = "Gruvbox-Dark-B";
+    };
+
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      dash-max-icon-size = 40;
     };
 
     "org/gnome/desktop/interface" = {
