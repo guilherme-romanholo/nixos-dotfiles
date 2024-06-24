@@ -27,7 +27,8 @@
     gruvbox-gtk-theme
 
     gnomeExtensions.user-themes
-    gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.appindicator
+    gnomeExtensions.pop-shell
   ];
 
   dconf.settings = {
@@ -37,7 +38,8 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
-	"trayIconsReloaded@selfmade.pl"
+        "appindicatorsupport@rgcjonas.gmail.com"
+	"pop-shell@system76.com"
       ];
     };
 
