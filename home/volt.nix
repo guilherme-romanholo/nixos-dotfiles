@@ -1,5 +1,4 @@
-{
-  inputs,
+{ inputs,
   outputs,
   lib,
   config,
@@ -45,6 +44,7 @@
       ];
     };
 
+    # gnome.dconf-editor
     "org/gnome/shell/extensions/user-theme" = {
       name = "Gruvbox-Dark-B";
     };
