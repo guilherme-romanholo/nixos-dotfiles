@@ -30,6 +30,8 @@
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.pop-shell
+
+    jetbrains.pycharm-professional
   ];
 
   dconf.settings = {
