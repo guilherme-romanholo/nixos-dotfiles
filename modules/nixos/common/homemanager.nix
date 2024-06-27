@@ -15,7 +15,7 @@
     # Home-manager configuration as module
     home-manager = {
       users = {
-        ${userSettings.username} = import ../../../home/${systemSettings.hostname}.nix;
+        ${userSettings.username} = import ../../../profiles/${systemSettings.profile}/home.nix;
       };
       extraSpecialArgs = {
         inherit inputs;

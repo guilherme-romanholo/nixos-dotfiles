@@ -4,29 +4,28 @@
   lib,
   config,
   pkgs,
-  userSettings,
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.nixos-wsl.nixosModules.wsl
     outputs.nixosModules.common
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
+    outputs.nixosModules.hardware
   ];
 
   # --- Common Modules --- #
   common.enable = true;
 
-  wsl = {
-    enable = true;
-    defaultUser = userSettings.username;
-    wslConf.automount.root = "/mnt";
-    wslConf.interop.appendWindowsPath = false;
-    wslConf.network.generateHosts = false;
-    startMenuLaunchers = true;
-  };
+  # --- Desktops --- #
+  gnome.enable = true;
+
+  # --- Optional --- #
+  printer.enable = true;
+
+  # --- Hardware --- #
+  grub.enable = true;
+  grub.disk = "/dev/vda";
 
   environment.systemPackages = with pkgs; [
     neovim

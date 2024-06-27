@@ -4,32 +4,32 @@
   lib,
   config,
   pkgs,
+  userSettings,
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.nixos-wsl.nixosModules.wsl
     outputs.nixosModules.common
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
+    outputs.nixosModules.hardware
   ];
 
   # --- Common Modules --- #
   common.enable = true;
 
-  # --- Desktops --- #
-  gnome.enable = true;
-
-  # --- Optional --- #
-  printer.enable = true;
-
-  # --- Bootloader --- #
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  wsl = {
+    enable = true;
+    defaultUser = userSettings.username;
+    wslConf.automount.root = "/mnt";
+    wslConf.interop.appendWindowsPath = false;
+    wslConf.network.generateHosts = false;
+    startMenuLaunchers = true;
+  };
 
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
   ];
 
   system.stateVersion = "24.05";

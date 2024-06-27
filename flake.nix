@@ -29,6 +29,7 @@
     # ----- System Settings ----- #
     systemSettings = {
       hostname = "volt";
+      profile = "work";
       locale = "pt_BR.UTF-8";
       timezone = "America/Sao_Paulo";
     };
@@ -76,7 +77,7 @@
     nixosConfigurations = {
       ${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         modules = [
-          ./hosts/${systemSettings.hostname}/configuration.nix
+          ./profiles/${systemSettings.profile}/configuration.nix
         ];
         specialArgs = {
           inherit inputs;

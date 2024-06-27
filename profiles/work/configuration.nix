@@ -7,11 +7,11 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     outputs.nixosModules.common
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
+    outputs.nixosModules.hardware
   ];
 
   # --- Common Modules --- #
@@ -25,9 +25,8 @@
   libvirt.enable = true;
   printer.enable = true;
 
-  # --- Bootloader --- #
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # --- Hardware --- #
+  uefi.enable = true;
 
   environment.systemPackages = with pkgs; [
     neovim

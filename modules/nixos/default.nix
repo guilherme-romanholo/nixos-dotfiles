@@ -5,4 +5,5 @@
   common = import ./common;
   optional = import ./optional;
   desktops = import ./desktops;
+  hardware = import ./hardware;
 }
