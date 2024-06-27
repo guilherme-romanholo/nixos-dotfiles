@@ -14,7 +14,7 @@
 
     grub.OSProber = lib.mkOption {
       type = lib.types.bool;
-      default = false;
+      default = true;
       description = "Enable OS Prober";
     };
   };
