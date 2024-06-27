@@ -7,6 +7,10 @@
   userSettings,
   ...
 }: {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
   options = {
     homemanager.enable = lib.mkEnableOption "enable homemanger";
   };

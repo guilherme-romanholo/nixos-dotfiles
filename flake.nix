@@ -5,10 +5,8 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 
-    # You can access packages and modules from different nixpkgs revs
-    # at the same time. Here's an working example:
+    # Nixpkgs Unstable
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
@@ -26,14 +24,16 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    # ----- System Settings ----- #
+    # System settings
     systemSettings = {
       hostname = "volt";
       profile = "work";
       locale = "pt_BR.UTF-8";
       timezone = "America/Sao_Paulo";
+      bootmode = "uefi";
+      grubDevice = "/dev/sda"; # If bootmode = grub
     };
-    # ------ User Settings ------ #
+    # User settings
     userSettings = {
       username = "guilherme";
       email = "guilhermeromanholobofo@gmail.com";
