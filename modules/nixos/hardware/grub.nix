@@ -21,7 +21,7 @@
 
   config = lib.mkIf config.grub.enable {
     boot.loader.grub.enable = true;
-    boot.loader.grub.device = grub.disk;
-    boot.loader.grub.useOSProber = grub.OSProber;
+    boot.loader.grub.device = config.grub.disk;
+    boot.loader.grub.useOSProber = config.grub.OSProber;
   };
 }
