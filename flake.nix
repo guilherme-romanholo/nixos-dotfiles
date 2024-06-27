@@ -26,11 +26,11 @@
     inherit (self) outputs;
     # System settings
     systemSettings = {
-      hostname = "volt";
+      hostname = "taz";
       profile = "work";
       locale = "pt_BR.UTF-8";
       timezone = "America/Sao_Paulo";
-      bootmode = "uefi";
+      bootmode = "grub";
       grubDevice = "/dev/sda"; # If bootmode = grub
     };
     # User settings
