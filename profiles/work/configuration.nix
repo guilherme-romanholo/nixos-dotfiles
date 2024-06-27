@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    ./general
+    ../general
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
   ];

@@ -8,6 +8,7 @@
   ...
 }: {
   imports = [
+    ../general
     inputs.nixos-wsl.nixosModules.wsl
     outputs.nixosModules.desktops
     outputs.nixosModules.optional
