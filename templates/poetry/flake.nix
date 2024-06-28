@@ -1,5 +1,5 @@
 {
-  description = "Python Language Template";
+  description = "Poetry Template";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -29,7 +29,7 @@
       in {
         packages = {
           myapp = mkPoetryApplication {
-            projectDir = ./.;
+            projectDir = ./project;
             preferWheels = true;
             propagatedBuildInputs = with pkgs; [];
           };
