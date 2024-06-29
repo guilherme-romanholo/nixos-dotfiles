@@ -4,4 +4,5 @@
   # List your module files here
   common = import ./common;
   optional = import ./optional;
+  desktops = import ./desktops;
 }
